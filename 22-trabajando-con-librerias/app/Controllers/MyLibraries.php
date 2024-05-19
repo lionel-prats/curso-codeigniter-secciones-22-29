@@ -106,4 +106,14 @@ class MyLibraries extends BaseController
             echo 'Error: ' . $e->getMessage();
         }        
     }
+    // GET http://22-trabajando-con-librerias.test/lib/agent (v200)
+    public function agent()
+    {
+        $agent = $this->request->getUserAgent();
+        $data = [
+            "title" => "User Agent Class", 
+            "agent" => $agent,
+        ];
+        return view('my_agent', $data);
+    }
 }

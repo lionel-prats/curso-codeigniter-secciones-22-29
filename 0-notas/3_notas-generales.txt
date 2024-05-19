@@ -1135,7 +1135,8 @@ Sección 17: Bootsrap 5
 - INSTALACION BOOTSTRAP 5.3.3 EN EL PROYECTO VIA CLI CON COMPOSER (https://getbootstrap.com/docs/5.3/getting-started/download/) (21/4/24) 
  
 1) instalo Bootsrap por linea de comandos 
-cUser@DESKTOP-0VF0DF8 MINGW64 /c/laragon/www/0_codeigniter4 (main) composer require twbs/bootstrap:5.3.3
+cUser@DESKTOP-0VF0DF8 MINGW64 /c/laragon/www/0_codeigniter4 (main) 
+composer require twbs/bootstrap:5.3.3
 *** esto crea la carpeta /twbs dentro de /vendor 
 
 2) luego copie los archivos "/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" y "/vendor/twbs/bootstrap/dist/js/bootstrap.min.js", y los pegue en "/public/bootsrap/css" y "/public/bootsrap/js" respectivamente, para poder accederlos desde el navegador 
@@ -1772,7 +1773,7 @@ seccion 22: Trabajando con librerías
 
 - ubicacion del repo local -> cursos/workspaces/curso-codeigniter
 
-- documentacion CURLRequest Class vvv 
+- documentacion CURLRequest Class (nativa, sin descargar nada extra) vvv 
 https://codeigniter.com/user_guide/libraries/curlrequest.html
 https://codeigniter4.github.io/userguide/libraries/curlrequest.html
 
@@ -1796,3 +1797,45 @@ seccion 22: Trabajando con librerías
 - creamos las siguietes rutas para hacer peticiones a endpoints de la app "0_codeigniter4" para crear y editar un apelicula en la DB code_peliculas vvv
 GET http://22-trabajando-con-librerias.test/lib/curl_post ( /app/Controllers/MyLibraries->curl_post() )
 GET http://22-trabajando-con-librerias.test/lib/curl_put ( /app/Controllers/MyLibraries->curl_put() )
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+200. Detectando el agente (tipo de dispositivo y navegador)
+
+- muchas veces necesitamos saber informacion sobre cliente que se esta conectando a nuestra aplicacion, por ejemplo:
+* el navegador 
+* la version 
+* si es movil o no es movil 
+* la plataforma 
+* si es un robot o no es un robot (es decir, si es una araña, como por ejemplo la araña de Google, que emplea para indexar sitios, etc.)
+
+- para esto, en CI4 disponemos del servicio (libreria) User Agent Class vvv 
+
+- documentacion User Agent Class (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/user_agent.html
+
+----- 
+
+- instalé bootstrap via Composer vvv 
+
+User@DESKTOP-0VF0DF8 MINGW64 /c/laragon/www/22-trabajando-con-librerias
+$ composer require twbs/bootstrap:5.0.2
+...
+
+*** igual no hace falta, porque para poder acceder desde el navegador tengo que colocar los archivos de bootsrap en /public 
+*** asi que dentro de /public creé /assets, dentro /css y /js, y dentro de estas 2 metí los archivos bootstrap.min.css y bootstrap.bundle.min.js respectivamente
+
+----- 
+
+- creamos la siguiente ruta para hacer una demo de como funciona el servicio User Agent Class vvv
+GET http://22-trabajando-con-librerias.test/lib/agent  
+
+*** desde las herramientas del desarrollador en los navegadores simulamos dispositivos móviles vamos a comprobar como funcionan algunas de las funciones de User Agent Class detectando de que dispositivo mobil se trata, su SO, etc.
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+201. Enviando emails
+
+...

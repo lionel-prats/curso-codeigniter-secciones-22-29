@@ -57,3 +57,11 @@ seccion 22: Trabajando con librerías
 - documentacion CURLRequest Class vvv 
 https://codeigniter.com/user_guide/libraries/curlrequest.html
 https://codeigniter4.github.io/userguide/libraries/curlrequest.html
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+200. Detectando el agente (tipo de dispositivo y navegador)
+
+- documentacion User Agent Class (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/user_agent.html

@@ -20,11 +20,12 @@ $routes->group('lib', function($routes){
     $routes->get('curl_put', 'MyLibraries::curl_put'); // (v199)
     $routes->get('curl_remove', 'MyLibraries::curl_remove'); // (v198)
     
-    $routes->get('curl_agent', 'MyLibraries::curl_agent'); // (v199)
-    $routes->get('curl_email', 'MyLibraries::curl_email'); // (v199)
-    $routes->get('curl_encrypt', 'MyLibraries::curl_encrypt'); // (v199)
-    $routes->get('curl_time', 'MyLibraries::curl_time'); // (v199)
-    $routes->get('curl_uri', 'MyLibraries::curl_uri'); // (v199)
-    $routes->get('curl_file', 'MyLibraries::curl_file'); // (v199)
+    $routes->get('agent', 'MyLibraries::agent'); // (v200)
+
+    $routes->get('_email', 'MyLibraries::_email'); // (v199)
+    $routes->get('_encrypt', 'MyLibraries::_encrypt'); // (v199)
+    $routes->get('_time', 'MyLibraries::_time'); // (v199)
+    $routes->get('_uri', 'MyLibraries::_uri'); // (v199)
+    $routes->get('_file', 'MyLibraries::_file'); // (v199)
 }); 
 
