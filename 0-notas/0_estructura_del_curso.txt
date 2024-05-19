@@ -1,0 +1,46 @@
+seccion 1 : introduccion al curso                      | 13 
+seccion 2 : basico - primeros pasos con codeigniter 4  | 90
+seccion 3 : crear el primer crud: peliculas            | 131
+seccion 4 : reto: crud categorias                      | 9
+seccion 5 : rutas y redirecciones                      | 68
+seccion 6 : introduccion a las rutas                   | -
+seccion 7 : sesion y mensaje flash                     | 22
+seccion 8 : vistas y layouts                           | 18 
+seccion 9 : formularios y validaciones                 | 30
+seccion 10: modelos                                    | 22
+seccion 11: filtros                                    | 77
+seccion 12: rest api crud                              | 40
+seccion 13: seeders                                    | 18 
+seccion 14: relaciones                                 | 151 
+seccion 15: Carga de archivos                          | 65
+seccion 16: Librerías y funciones en Codeigniter       | 30
+seccion 17: Bootsrap 5                                 | 70
+seccion 18: Módulo web                                 | 129 
+seccion 19: Rest api relaciones métodos personalizados | 31  
+seccion 20: Shield                                     | 28  
+seccion 21: seccion 21: Shield: Grupos y Permisos      | 159 | 1201 minutos | 20 horas 01 minutos
+seccion 22: Trabajando con librerías                   | 68
+
+seccion 23: xxx                                        | 145
+seccion 24: xxx                                        | 29
+seccion 25: xxx                                        | 170
+seccion 26: xxx                                        | 540
+seccion 27: xxx                                        | 72
+seccion 28: xxx                                        | 25
+seccion 29: xxx                                        | 77  | 2327 minutos | 38 horas 47 minutos
+
+CURSO ANTIGUO
+seccion 31: xxx                                        | 154
+seccion 32: xxx                                        | 89
+seccion 33: xxx                                        | 140
+seccion 34: xxx                                        | 166
+seccion 35: xxx                                        | 295
+seccion 36: xxx                                        | 76
+seccion 37: xxx                                        | 27 
+
+realizado -> 1201 minutos | 20 horas 01 minutos | (51.61%) 
+pendiente -> 1126 minutos | 18 horas 46 minutos | (48.39%)
+total     -> 2327 minutos | 38 horas 47 minutos | (100%)
+
+CANAL YOUTUBE PROFESOR vvv
+https://www.youtube.com/@desarrollolibre
