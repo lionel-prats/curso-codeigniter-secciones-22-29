@@ -1,6 +1,6 @@
 <?php echo $this->extend("layouts/web"); ?>
 <?php echo $this->section("content"); ?>
-    <h1><?php echo $title; ?></h1>
+    <h1 class="text-center"><?php echo $title; ?></h1>
     <div class="table-responsive">
         <table class="table table-primary">
             <thead>

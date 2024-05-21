@@ -22,6 +22,7 @@ class Encryption extends BaseConfig
      * See the user guide for more info.
      */
     public string $key = '';
+    // public string $key = 'aBigsecret_ofAtleast32Characters'; // seteo manual del atributo (v202)
 
     /**
      * --------------------------------------------------------------------------

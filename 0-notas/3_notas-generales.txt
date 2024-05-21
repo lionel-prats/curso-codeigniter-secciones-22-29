@@ -1772,6 +1772,7 @@ seccion 22: Trabajando con librerías
 198. Haciendo peticiones HTTP (CURL): get y delete 
 
 - ubicacion del repo local -> cursos/workspaces/curso-codeigniter
+- Virtual Host proyecto -> http://22-trabajando-con-librerias.test/
 
 - documentacion CURLRequest Class (nativa, sin descargar nada extra) vvv 
 https://codeigniter.com/user_guide/libraries/curlrequest.html
@@ -1782,7 +1783,6 @@ User@DESKTOP-0VF0DF8 MINGW64 /c/laragon/www
 composer create-project codeigniter4/appstarter 22-trabajando-con-librerias
 ...
 
-- Virtual Host proyecto -> http://22-trabajando-con-librerias.test/
 
 - creamos las siguietes rutas para hacer peticiones a endpoints de la app "0_codeigniter4", que retornan data de la DB code_peliculas vvv
 GET http://22-trabajando-con-librerias.test/lib/curl_get ( /app/Controllers/MyLibraries->curl_get() )
@@ -1837,5 +1837,130 @@ GET http://22-trabajando-con-librerias.test/lib/agent
 
 seccion 22: Trabajando con librerías 
 201. Enviando emails
+
+- Email Class (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/email.html
+
+- encontre un tutorial de como configurar un proyecto CI4 para enviar mails usando MailTrap vvv
+https://www.youtube.com/watch?v=unX96-meddQ
+
+----- 
+
+- paso a paso configuracion y ejecucion vvv 
+
+- creé las siguientes rutas para la demo (me basé en el turorial encontrado) vvv 
+// GET http://22-trabajando-con-librerias.test/lib/send-email ( MyLibraries->form_email() )
+// POST http://22-trabajando-con-librerias.test/lib/send-email ( MyLibraries->send_email() )
+
+- En mailtrap
+1. me logueo en mailtrap 
+2. en el panel izquierdo, entro a "Email Testing"/"Inboxes" 
+3. en mi unico inbox "DevWebCamp", voy a "settings" (ruedita), y luego a "Integration"
+4. busco la integracion para "Codeigniter"
+5. con click en "copy" copio todas las credenciales con las que tengo que configurar mi proyecto VVV 
+
+$config = Array(
+  'protocol' => 'smtp',
+  'smtp_host' => 'sandbox.smtp.mailtrap.io',
+  'smtp_port' => 2525,
+  'smtp_user' => '********f7bf',
+  'smtp_pass' => '********f3db',
+  'crlf' => "\r\n",
+  'newline' => "\r\n"
+);
+
+- en el proyecto
+1. con las configuraciones y credenciales obtenidas en mailtrap, seteo las siguientes propiedades de /app/Config/Email.php vvv
+
+public string $protocol = $config["protocol"];
+public string $SMTPHost = $config["smtp_host"];
+public string $SMTPPort = $config["smtp_port"];
+public string $SMTPUser = $config["smtp_user"];
+public string $SMTPPass = $config["smtp_pass"];
+public string $CRLF = $config["crlf"];
+public string $newline = $config["newline"];
+
+- en el controlador MyLibraries->send_email()
+* ver configuracion en el controlador
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+202. Encriptando textos
+
+- Encryption Service (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/encryption.html
+
+- creé la siguiente ruta para la demo vvv 
+// GET http://22-trabajando-con-librerias.test/lib/encrypter ( MyLibraries->encrypter() )
+
+- para que el encriptado funcione correctamente tengo que setear el atributo $key del archivo de configuracion /app/Config/Encryption.php
+
+- esta es una forma de setear el atributo en el archivo, desde el controlador vvv
+$config         = new \Config\Encryption();
+$config->key    = 'aBigsecret_ofAtleast32Characters';
+$encrypter = \Config\Services::encrypter($config);
+
+- tambien podria setear el atributo $key manualmente desde el archivo en vez de hacerlo desde el controlador, y cargar el servicio sin pasarle ningun argumento vvv
+$encrypter = \Config\Services::encrypter();
+
+*** ver controlador para mayor claridad
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+203. Trabajando con fechas
+
+- Times and Dates (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/time.html
+
+- Listado de zonas horarias admitidas (documentacion adicional PHP) vvv 
+https://www.php.net/manual/es/timezones.php
+
+- La clase DateTime (documentacion adicional PHP) vvv 
+https://www.php.net/manual/es/class.datetime.php
+
+----- 
+
+- para setear el proyecto con una zona horaria determinada tenemos que setear el atributo $appTimezone en el archivo de configuracion /app/Config/App.php
+public string $appTimezone = 'America/Argentina/Buenos_Aires';
+
+-----
+
+- creé la siguiente ruta para la demo vvv 
+// GET http://22-trabajando-con-librerias.test/lib/time ( MyLibraries->time() )
+
+*** ver controlador para mayor claridad
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+204. Trabajando con las URIs
+
+- Working with URIs (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/uri.html
+
+- creé la siguiente ruta para la demo vvv 
+// GET http://22-trabajando-con-librerias.test/lib/uri ( MyLibraries->uri() )
+
+*** ver controlador para mayor claridad
+
+--------------------------------------------------------------------------------
+
+seccion 22: Trabajando con librerías 
+205. Trabajando con archivos
+
+- Working with Files (nativa, sin descargar nada extra) vvv 
+https://codeigniter4.github.io/userguide/libraries/files.html
+
+- creé la siguiente ruta para la demo vvv 
+// GET http://22-trabajando-con-librerias.test/lib/file ( MyLibraries->file() )
+
+*** ver controlador para mayor claridad
+
+--------------------------------------------------------------------------------
+
+seccion 23. 
+206. Procesamiento de imágenes: fit
 
 ...
